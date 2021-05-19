@@ -1,0 +1,329 @@
+/*Table of Contents
+---------------------------------------------------------
+-General Content
+-Typeography
+-Header & Navigation
+-Images & Media
+-Footer
+-Media Queries
+-------------------------------------------------------*/
+
+/*----General Content*/
+.cookies{
+font-family: Georgia, serif;
+color: #1a0d0a;
+margin-left:5%;
+margin-right: 5%;
+}
+
+/*---------Typeography*/
+
+.intro h1{
+font-family: Georgia, serif;
+text-align: center;
+letter-spacing: 14px;
+color: #1a0d0a;
+font-size: 40px;
+text-transform: uppercase;
+}
+
+p{
+font-family: Georgia, serif;
+text-align: center;
+letter-spacing: 2px;
+color: #1a0d0a;
+font-size: 15px;
+text-transform: uppercase;
+}
+
+.btmnavtitle{
+color:#f3e5e0;
+font-size: 18px;
+letter-spacing: 6px;
+}
+
+h3{
+color:#ff4a09;
+text-transform: uppercase;
+font-family: Georgia, serif;
+text-align: center;
+font-size: 33px;
+letter-spacing: 14px;
+font-weight: 100;
+}
+
+/*--------Header & Navigation*/
+.mobile-container {
+max-width: 480px;
+background-color: #1a0d0a;
+height: 500px;
+color: #f3e5e0;
+}
+
+.topnav {
+overflow: hidden;
+background-color: #1a0d0a;
+position: relative;
+width:100%;
+}
+
+.topnav #myLinks {
+display: none;
+text-decoration: none;
+}
+
+.topnav a {
+font-family: Georgia, serif;
+float: left;
+color: #f3e5e0;
+padding: 20px 22px;
+text-decoration: none;
+font-size: 22px;
+text-transform: uppercase;
+letter-spacing: 10px;
+}
+
+.topnav a.icon {
+float: right;
+}
+
+.topnav a:hover {
+color: #ff4a09;
+text-decoration: none;
+}
+
+.active {
+color: #ff4a09;
+}
+
+i.fa{
+font-size: 33px;
+margin:0%;
+padding:0%;
+}
+
+/*--------Images & Media*/
+body, html {
+height: 100%;
+width:100%;
+}
+
+video{
+margin-left: 32%;
+margin-right:25%;
+}
+
+.hero-image {
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+url("/media/firegi.gif");
+height: 50%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+}
+
+.row {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+
+.column {
+flex-basis: 100%;
+}
+
+button, a {
+text-decoration: none;
+}
+
+button{
+text-transform: uppercase;
+margin-left: 60px;
+text-align:center;
+font-family: Georgia, serif;
+width:180px;
+letter-spacing: 8px;
+font-weight: 400;
+color: #1a0d0a;
+font-size: 16px;
+background-color: #f3e5e0;
+border-color: #1a0d0a 1px;
+border-style:solid;
+}
+
+button:hover {
+background-color:#ff4b0934;
+color: #f3e5e0;
+border-style:solid;
+font-weight: 600;
+}
+
+img{
+height:fit-content;
+max-height: 250px;
+width:fit-content;
+max-width: 250px;
+}
+
+.ep{
+margin-left: 42%;
+margin-right: 42%;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.epbox{
+border-color: #1a0d0a 1px;
+border-style:solid;
+align-content: center;
+padding: 8px;
+}
+
+.playlists{
+margin-left: 30%;
+margin-right: 25%;
+}
+
+iframe{
+    padding: 40px;
+}
+
+/*--------Footer*/
+
+.footer{
+background-color: #1a0d0a;
+width:100%;
+display: inline;
+list-style-type: none;
+color: #f3e5e0;
+font-family: Georgia, serif;
+float: left;
+font-size: 14px;
+text-transform: uppercase;
+text-decoration: none;
+padding-bottom: 2%;
+}
+
+.bottomnav{
+color: #f3e5e0;
+padding-top: 1%;
+padding-left:2%;
+}
+
+ul.bnav{
+color: #f3e5e0;
+list-style-type: none;
+font-family: Georgia, serif;
+float: left;
+font-size: 16px;
+text-transform: uppercase;
+letter-spacing: 6px;
+text-decoration: none;
+list-style-type: none;
+}
+ul.bnav li{
+color: #f3e5e0;
+}
+
+ul.bnav li a{
+color: #f3e5e0;
+list-style-type: none;
+text-decoration: none;
+list-style-type: none;
+}
+
+ul.bnav li a:hover{
+color: #ff4a09;
+}
+
+
+.socialicons{
+display: block;
+padding-left:40%;
+padding-top: 1%;
+}
+
+.fa {
+align-content: center;
+padding: 20px;
+font-size: 30px;
+width: 30px;
+text-align: center;
+text-decoration: none;
+margin: 5px 2px;
+border-radius: 100%;
+}
+
+.fa:hover {
+color: #ff4a09;
+text-decoration: none;
+}
+
+
+.fa-facebook {
+background: #f3e5e0;
+color:#1a0d0a;
+}
+
+.fa-twitter {
+background: #f3e5e0;
+color:#1a0d0a;
+}
+
+
+.fa-youtube-play {
+background: #f3e5e0;
+color:#1a0d0a;
+}
+
+.fa-instagram {
+background: #f3e5e0;
+color:#1a0d0a;
+}
+
+.fa-spotify {
+background: #f3e5e0;
+color:#1a0d0a;
+}
+
+.fa-envelope {
+background: #f3e5e0;
+color:#1a0d0a;
+}
+
+.adminlink{
+font-family: Georgia, serif;
+float: right;
+padding-right: 1%;
+color: #f3e5e0;
+font-size: 14px;
+text-transform: uppercase;
+letter-spacing: 3px;
+text-decoration: none;
+}
+.adminlink:hover{
+color: #ff4a09;
+text-decoration: none;
+}
+
+.cookieslink{
+font-family: Georgia, serif;
+float: right;
+padding-right: 1%;
+color: #f3e5e0;
+font-size: 14px;
+text-transform: uppercase;
+letter-spacing: 3px;
+text-decoration: none;
+}
+.cookieslink:hover{
+color: #ff4a09;
+text-decoration: none;
+}
+
+
+/*-------Media Queries*/
+
+
+/*-------------------------------------------------------*/
