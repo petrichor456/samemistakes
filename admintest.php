@@ -2,43 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Same Mistakes - Admin Panel</title>
-<script>
-$(document).ready(function(){
-	// Activate tooltip
-	$('[data-toggle="tooltip"]').tooltip();
-
-	// Select/Deselect checkboxes
-	var checkbox = $('table tbody input[type="checkbox"]');
-	$("#selectAll").click(function(){
-		if(this.checked){
-			checkbox.each(function(){
-				this.checked = true;
-			});
-		} else{
-			checkbox.each(function(){
-				this.checked = false;
-			});
-		}
-	});
-	checkbox.click(function(){
-		if(!this.checked){
-			$("#selectAll").prop("checked", false);
-		}
-	});
-});
-</script>
 </head>
-
-
-
 
 <html>
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <!-- FONT
@@ -74,39 +45,24 @@ $(document).ready(function(){
 <!--NAVBAR--------------------------------------------------------->
 <div class="hero-image">
     </div>
-  <br>
-    <br>
-      <br>
-        <br>
-          <br>  <br>
-<form action="admintest.php" method="post" enctype="multipart/form-data">
-  <label>Username</label>
-  <input type="text" name="username">
-  <br>
-  <label>UploadImage</label>
-  <input type="file" name='myfile'>
-  <br/>
-  <input type="submit" value="upload">
-</form>
+
 </html>
 
-/*
+
 <?php
 
-$user=$_POST['username'];
-$image=$_FILES['myfile'];
-echo "Hello $user <br/>";
-echo "File Name<b>::</b> ".$image['name'];
-$_POST['test'] = $image['name'];
-$test = $image['name'];
-echo "File Name<b>::</b> ".$test;
-echo "File Name<b>::</b> ".$_POST['test'];
+$servername = "45.84.204.205";
+$username = "u356620682_samemistakes";
+$password = "8RNR47G/s[I";
 
-move_uploaded_file($image['tmp_name'],"img/".$image['name']);
-*/
+// Create connection
+$con = new mysqli($servername, $username, $password);
 
-$con = mysqli_connect('45.84.204.205', 'u356620682_samemistakes', '8RNR47G/s[I', 'u356620682_samemistakes') or die("Connection did not occur");
-
+// Check connection
+if ($con->connect_error) {
+  die("Connection failed: " . $con->connect_error);
+}
+echo "Connected successfully";
 
 if($test != "")
 
@@ -156,43 +112,6 @@ if(isset($_POST['submit']))
     mysqli_query($con, $CreateQuery);
 };
 ?>
-
-
-
-
-
-
-
-<body>
-    <div class="container">
-		<div class="table-responsive">
-			<div class="table-wrapper">
-				<div class="table-title">
-					<div class="row">
-						<div class="col-xs-6">
-							<h2>Stock Management</h2>
-						</div>
-					</div>
-				</div>
-				<table class="table table-striped table-hover">
-
-					<thead>
-						<tr>
-
-							<th>ID</th>
-							<th>Product Name</th>
-                            <th>Colour</th>
-                            <th>Stock</th>
-							<th>Description</th>
-							<th>Image</th>
-							<th>Size</th>
-                            <th>Price</th>
-						</tr>
-					</thead>
-
-
-
-
           <?php
 
           $result = mysqli_query($con,"SELECT * FROM products");
@@ -200,16 +119,19 @@ if(isset($_POST['submit']))
             {
               ?>
 					<tbody>
-              <form action='crud.php' method='post'>;
+              <form action='admintest.php' method='post'>
 						<tr>
 							<td><input type='text' name='hidden' value= "<?php echo $row['ID'];?>"></td>
 							<td><input type='text' name='prod_name' value= "<?php echo $row['prod_name'];?>"></td>
-							<td><input type='text' name='description' value= "<?php echo $row['Description'];?>"></td>
-							<td><input type='text' name='image' value= "<?php echo $row['image'];?>"></td>
+              <td><input type='text' name='colour' value= "<?php echo $row['colour'];?>"></td>
               <td><input type='text' name='stock' value= "<?php echo $row['stock'];?>"></td>
+							<td><input type='text' name='description' value= "<?php echo $row['Description'];?>"></td>
+							<td><input type='file' name='image' value= "<?php echo $row['image'];?>"></td>
+              <td><input type='text' name='size' value= "<?php echo $row['size'];?>"></td>
+              <td><input type='text' name='price' value= "<?php echo $row['price'];?>"></td>
+              
 							<td>
-                <input type='submit' name='submit' value= 'update'>
-								<input type='submit' name='delete' value= 'delete'>
+                
 							</td>
 						</tr>
 
